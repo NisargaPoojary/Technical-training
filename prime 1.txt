@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+//Program to check whether the given number is prime or not
+int main(){
+    int x;
+    scanf("%d", &x);
+    if (x > 0){
+        if ( x == 1)
+            printf("Neither prime nor composite");
+        else{
+            for(int f = 2; f<=sqrt(x);f++){
+                if ( x % f ==0){ // checking whether f is factor of x
+                    printf("Not Prime");
+                    return 0;//Terminate the program (exit(0))
+                    
+                }
+            }
+            printf("Prime");
+        }
+    }
+    return 0;
+}
