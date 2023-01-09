@@ -1,0 +1,32 @@
+#include &lt;stdio.h&gt;
+//Program to merge two sorted array
+int main(){
+int size1, size2, i,j,k;
+scanf(&quot;%d %d&quot;, &amp;size1, &amp;size2);
+int a[size1], b[size2], merge[size1+size2];
+//Getting array elements for first array
+for (int index = 0; index&lt;size1; index++)
+
+scanf(&quot;%d&quot;, &amp;a[index]);
+//Getting array elements for second array
+for (int index = 0; index&lt;size2; index++)
+scanf(&quot;%d&quot;, &amp;b[index]);
+//merging two sorted arrays;
+for (i = 0, j =0, k = 0;i&lt;size1 &amp;&amp; j &lt;size2; k++){
+if (a[i]&lt; b[j])
+merge[k] = a[i++];
+else
+merge[k] = b[j++];
+}
+//checking any elements left in first array
+while (i&lt;size1)
+merge[k++] = a[i++];
+//checking any elements left in second array
+while(j&lt;size2)
+merge[k++] = b[j++];
+//printing the merged array
+for (int index =0; index&lt;size1+size2; index++)
+printf(&quot;%d&quot;, merge[index]);
+
+return 0;
+}
