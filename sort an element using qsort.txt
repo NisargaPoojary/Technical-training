@@ -1,0 +1,21 @@
+#include &lt;stdlib.h&gt;
+//Program to sort an array elements using qsort()
+int check(const void* n1, const void* n2){
+return *(int*)n2 - *(int*)n1;
+}
+
+int main()
+{
+int size;
+scanf(&quot;%d&quot;, &amp;size);
+int arr[size];
+//Getting array elements
+for (int index = 0; index&lt;size; index++)
+scanf(&quot;%d&quot;, &amp;arr[index]);
+//sorting array elements using qsort()
+qsort(arr, size, sizeof(arr[0]), check);
+//printing the sorted elements
+for (int index = 0;index&lt;size; index++ )
+printf(&quot;%d&quot;, arr[index]);
+return 0;
+}
