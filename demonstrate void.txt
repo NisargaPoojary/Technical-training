@@ -1,5 +1,5 @@
 //Program to demonstrate void *
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 int main()
 {
