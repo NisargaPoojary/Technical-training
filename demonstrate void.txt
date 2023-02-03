@@ -1,0 +1,18 @@
+//Program to demonstrate void *
+#include &lt;stdio.h&gt;
+
+int main()
+{
+int x = 1000;
+char ch = &#39;A&#39;;
+void *ptr;
+ptr = &amp;x;
+printf(&quot;%d\t&quot;, *(int*)ptr);
+ptr = &amp;ch;
+printf(&quot;%c\t&quot;, *(char*)ptr);
+float f = 10.5;
+ptr = &amp;f;
+printf(&quot;%f\t&quot;, *(float*)ptr);
+
+return 0;
+}
