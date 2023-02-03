@@ -4,15 +4,15 @@
 int main()
 {
 int x = 1000;
-char ch = &#39;A&#39;;
+char ch = 'A';
 void *ptr;
-ptr = &amp;x;
-printf(&quot;%d\t&quot;, *(int*)ptr);
-ptr = &amp;ch;
-printf(&quot;%c\t&quot;, *(char*)ptr);
+ptr = &x;
+printf("%d\t", *(int*)ptr);
+ptr = &ch;
+printf("%c\t", *(char*)ptr);
 float f = 10.5;
-ptr = &amp;f;
-printf(&quot;%f\t&quot;, *(float*)ptr);
+ptr = &f;
+printf("%f\t", *(float*)ptr);
 
 return 0;
 }
