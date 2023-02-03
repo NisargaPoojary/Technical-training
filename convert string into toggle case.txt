@@ -1,13 +1,13 @@
 //Program to convert a string into toggle case
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 int main()
 {
 char str[100];
-scanf(&quot;%[^\n]s&quot;, str);
+scanf("%[^\n]s", str);
 for (int i = 0; str[i];i++){
-if (str[i]&gt;=&#39;A&#39; &amp;&amp; str[i]&lt;=&#39;Z&#39;)
+if (str[i]>='A' && str[i]<='Z)
 str[i] = str[i] + 32; //converting upper case into lower case
-else if (str[i]&gt;=&#39;a&#39; &amp;&amp; str[i]&lt;=&#39;z&#39;)
+else if (str[i]>='a' && str[i]<='z')
 str[i] -= 32; //converting lower case into upper case
 }
 puts(str);
