@@ -1,0 +1,29 @@
+//Program to find second least value from a list of integers
+#include <stdio.h>
+#include <limits.h>
+#include <stdlib.h>
+int main(){
+int size, *list, min, smin;
+min = smin = INT_MAX;
+
+scanf("%d",&size); 
+
+
+list =(int *)malloc(size * sizeof(int));
+
+for (int i= 0; i<size;i++)
+scanf("%d", list+i); 
+for (int i = 0; i<size; i++){
+if (min > *(list+i)){
+smin= min;
+min = *(list+i);
+}
+else if (smin > *(list+i) &&min != *(list+i))
+smin = *(list+i);
+}
+
+free(list);
+printf("Second Minimum : %d", smin);
+
+return 0;
+}
